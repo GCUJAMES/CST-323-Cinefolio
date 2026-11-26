@@ -1,0 +1,252 @@
+
+/* Color Palette */
+:root {
+    --background: #0d0d0f;
+    --surface: #181719;
+    --orange: #ff1c1c;
+    --orange-glow: #ff0000;
+    --text: #f4f4f5;
+    --muted: #a1a1aa;
+}
+
+/* Global Styling */
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #151517;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 121, 28, 0.25);
+    box-shadow: 0 2px 20px rgba(255, 85, 0, 0.08);
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #d4d4d8;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--orange);
+    text-shadow: 0 0 12px var(--orange-glow);
+}
+
+/* Orange Brand Accent */
+.accent {
+    color: var(--orange);
+    text-shadow: 0 0 20px rgba(255, 85, 0, 0.5);
+}
+
+/* Home Page Hero */
+.hero {
+    padding: 110px 20px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255, 85, 0, 0.10),
+        transparent 70%
+    );
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: bold;
+    letter-spacing: -3px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hero-description {
+    color: var(--muted);
+    max-width: 600px;
+    margin: 20px auto 30px;
+    font-size: 18px;
+}
+
+/* Primary Orange Button */
+.btn-orange {
+    background-color: var(--orange);
+    color: #101010;
+    border: 1px solid var(--orange);
+    font-weight: bold;
+    box-shadow: 0 0 18px rgba(255, 85, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: #ff923f;
+    color: #101010;
+    box-shadow: 0 0 30px rgba(255, 85, 0, 0.65);
+    transform: translateY(-2px);
+}
+
+/* Secondary Outline Button */
+.btn-outline-orange {
+    color: var(--orange);
+    border: 1px solid var(--orange);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-orange:hover {
+    background-color: var(--orange);
+    color: #101010;
+    box-shadow: 0 0 20px rgba(255, 85, 0, 0.4);
+}
+
+/* Feature Cards */
+.feature-card {
+    background-color: var(--surface);
+    border: 1px solid rgba(255, 121, 28, 0.20);
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: var(--orange);
+    box-shadow: 0 0 25px rgba(255, 85, 0, 0.20);
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    font-size: 21px;
+    color: var(--orange);
+}
+
+.feature-card p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #151517;
+    color: var(--muted);
+}
+
+.border-bottom,
+.border-top {
+    border-color: rgba(255, 121, 28, 0.25) !important;
+}
+
+/* FOR MOVIES PAGE */
+/* Movie Library */
+
+.text-muted-custom {
+    color: var(--muted);
+}
+
+.nav-link.active {
+    color: var(--orange);
+}
+
+.library-summary {
+    background-color: var(--surface);
+    border: 1px solid rgba(255, 121, 28, 0.25);
+    border-radius: 12px;
+    padding: 20px 30px;
+    max-width: 240px;
+    box-shadow: 0 0 20px rgba(255, 85, 0, 0.08);
+}
+
+.library-summary h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Movie Table */
+
+.movie-table-container {
+    background-color: var(--surface);
+    border: 1px solid rgba(255, 121, 28, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(255, 85, 0, 0.06);
+}
+
+.movie-table {
+    --bs-table-bg: var(--surface);
+    --bs-table-color: var(--text);
+    --bs-table-border-color: #303036;
+}
+
+.movie-table thead th {
+    background-color: #201914;
+    color: var(--orange);
+    padding: 18px 15px;
+    white-space: nowrap;
+}
+
+.movie-table tbody td {
+    padding: 20px 15px;
+}
+
+.movie-table tbody tr:hover td {
+    background-color: #241c17;
+}
+
+/* Movie Ratings */
+
+.rating {
+    color: var(--orange) !important;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Watch Status Badges */
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.status-watched {
+    background-color: rgba(34, 197, 94, 0.12);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.status-pending {
+    background-color: rgba(255, 121, 28, 0.12);
+    color: var(--orange);
+    border: 1px solid rgba(255, 121, 28, 0.25);
+}
+
+/* Movie Reviews */
+
+.review-cell {
+    min-width: 180px;
+    max-width: 280px;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+    color: var(--muted) !important;
+}

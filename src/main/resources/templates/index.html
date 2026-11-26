@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cinefolio | Home</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark border-bottom">
+        <div class="container">
+
+            <a class="navbar-brand" th:href="@{/}">
+                Cine<span class="accent">folio</span>
+            </a>
+
+            <div class="d-flex gap-4">
+                <a class="nav-link" th:href="@{/}">Home</a>
+                <a class="nav-link" th:href="@{/movies}">Movie Library</a>
+                <a class="nav-link" th:href="@{/movies/add}">Add Movie</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="hero text-center">
+
+            <p class="accent tagline">
+                YOUR PERSONAL CINEMA COLLECTION
+            </p>
+
+            <h1>Cine<span class="accent">folio</span></h1>
+
+            <h2>A collection worth watching.</h2>
+
+            <p class="hero-description">
+                Discover a better way to organize your favorite films,
+                track your watchlist and review your movie experiences.
+            </p>
+
+            <a class="btn btn-orange btn-lg m-2"
+               th:href="@{/movies}">
+                View Movie Library
+            </a>
+
+            <a class="btn btn-outline-orange btn-lg m-2"
+               th:href="@{/movies/add}">
+                Add a Movie
+            </a>
+
+        </section>
+
+        <!-- Features Section -->
+        <section class="row g-4 pb-5">
+
+            <!-- Movie Collection -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h3>Build Your Collection</h3>
+                    <p>
+                        Store and organize all your favorite movies
+                        in one place.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Watchlist -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h3>Track Your Watchlist</h3>
+                    <p>
+                        Keep track of movies you have watched
+                        and plan to watch.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Ratings and Reviews -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h3>Rate and Review</h3>
+                    <p>
+                        Record your personal ratings and thoughts
+                        about each film.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 border-top">
+        <p class="mb-0">
+            Cinefolio &copy; 2026 | CST-323 Cloud Computing
+        </p>
+    </footer>
+
+</body>
+</html>
